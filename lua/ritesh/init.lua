@@ -18,8 +18,35 @@ end
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 
+require("ritesh.options")
+
 --setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+local opts = {
+	defaults = {
+    		lazy = true, -- should plugins be lazy-loaded?
+	},
+	install = {
+		missing = true, --install missing plugins on startup
+		colorscheme = {"rose-pine"}
+	},
+	rtp = {
+		disabled_plugins = {
+        	 "gzip",
+	         "matchit",
+        	 "matchparen",
+        	 "netrwPlugin",
+	         "tarPlugin",
+        	 "tohtml",
+        	 "tutor",
+	         "zipPlugin",
+      		},
+	},
+	change_detection = {
+		notify = true,
+	},
+}
+
+require("lazy").setup("plugins", opts)
 
