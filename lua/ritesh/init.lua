@@ -17,6 +17,7 @@ end
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 require("ritesh.options")
 
@@ -48,5 +49,5 @@ local opts = {
 	},
 }
 
-require("lazy").setup("plugins", opts)
+require("lazy").setup("plugins")
 
