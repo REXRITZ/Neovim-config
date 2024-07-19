@@ -20,6 +20,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("ritesh.options")
+require("ritesh.keymaps")
 
 --setup lazy.nvim
 vim.opt.rtp:prepend(lazypath)
