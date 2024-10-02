@@ -30,4 +30,6 @@ opt.errorbells = false
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 
-
+--Background
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
